@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+	font-family: "Caveat", serif;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+	background-color: lightyellow;
+	position: relative;
+	overflow: hidden;
+}
+
+.action-panel {
+	display: flex;
+
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+
+	z-index: 75;
+
+	button {
+		margin-left: 8px;
+	}
+}
+
+button {
+	cursor: pointer;
+}
+
+.btn {
+	padding: 0.5rem;
+	padding-inline: 1rem;
+	margin: 0 0 0 8px;
+
+	background-color: yellow;
+
+	border: 2px solid orange;
+	border-radius: 1rem;
+	outline: 0px solid rgba(0, 255, 255, 1);
+
+	cursor: pointer;
+	user-select: none;
+
+	transition: all ease 0.2s;
+
+	&:hover {
+		outline: 4px solid rgba(0, 255, 255, 1);
+	}
+}

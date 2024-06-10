@@ -1,0 +1,19 @@
+<div class="wrapper" (mousedown)="focusTask()">
+	<div class="top-bar" stopClickPropagation>
+		<button (click)="deleteTask()" class="closeBtn">X</button>
+	</div>
+
+	<textarea
+		type="text"
+		[(ngModel)]="task.message"
+		[value]="task.message"
+		stopClickPropagation
+		[style.text-decoration]="task.done ? 'line-through' : 'none'"
+	>
+	</textarea>
+
+	<div class="actions" stopClickPropagation>
+		<button class="btn">Delete</button>
+		<button class="btn" (click)="task.done = !task.done">Done</button>
+	</div>
+</div>
